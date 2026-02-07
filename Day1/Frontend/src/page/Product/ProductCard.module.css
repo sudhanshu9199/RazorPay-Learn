@@ -1,0 +1,116 @@
+.seamless-card {
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+.seamless-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+.seamless-card:hover .image-container img {
+  transform: scale(1.05);
+}
+.seamless-card:hover .overlay {
+  opacity: 1;
+}
+.seamless-card .image-container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.seamless-card .image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.seamless-card .image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.seamless-card .image-container .overlay .view-btn {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transform: translateY(10px);
+  transition: transform 0.3s;
+}
+.seamless-card .image-container .overlay .view-btn:hover {
+  background: #f0f0f0;
+}
+.seamless-card .card-content {
+  padding: 20px;
+}
+.seamless-card .card-content .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.seamless-card .card-content .header .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  text-transform: capitalize;
+}
+.seamless-card .card-content .header .price {
+  font-weight: 600;
+  color: #27ae60;
+  background: #eafaf1;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.seamless-card .card-content .description {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.seamless-card .card-content .buy-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.2);
+  margin-top: auto;
+}
+.seamless-card .card-content .buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(44, 62, 80, 0.3);
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+.seamless-card .card-content .buy-btn:active {
+  transform: scale(0.98);
+}/*# sourceMappingURL=ProductCard.module.css.map */
